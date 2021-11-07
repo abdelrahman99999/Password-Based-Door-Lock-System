@@ -1,6 +1,9 @@
 # Password-Based-Door-Lock-System
 Embedded System Project based on AVR Architecture using layered architecture model. I used 2 ATmega16 microcontrollers ,one for Human Interface which connected to one keypad and one LCD. the second microcontroller for control system which connected to one Buzzer and one Motor and one EEPROM.
 
+## Simulation
+![image from program](https://github.com/abdelrahman99999/Password-Based-Door-Lock-System/blob/main/project%20screenshots%20while%20working/3.png?raw=true)
+
 ## Sequence of the Application
 - **first time to the program** 
     you must set the Application password
@@ -26,8 +29,7 @@ Embedded System Project based on AVR Architecture using layered architecture mod
 ![image from program](https://github.com/abdelrahman99999/Password-Based-Door-Lock-System/blob/main/HMI%20and%20%20Control%20Layers/HMI_Layers.png?raw=true)
 ### Control ECU Layers
 ![image from program](https://github.com/abdelrahman99999/Password-Based-Door-Lock-System/blob/main/HMI%20and%20%20Control%20Layers/Control_Layers.png?raw=true)
-## proteus simulation
-![image from program](https://github.com/abdelrahman99999/Password-Based-Door-Lock-System/blob/main/project%20screenshots%20while%20working/3.png?raw=true)
+
 
 ## Main Hardware Components
 - 2 ATmege16 
@@ -39,6 +41,32 @@ Embedded System Project based on AVR Architecture using layered architecture mod
 - External EEPROM
 - Resistors
 - L293D
+
+## Circuit Connections
+### Human Machine Interface ECU
+- Keypad 
+    * PortB
+- LCD 
+    * Data: PortC
+    * Rs: PD5
+    * RW: PD6
+    * E: PD7
+- UART 
+    * Tx: PD1
+    * Rx: PD0
+    
+### Control ECU
+- EEPROM
+    * SCL: PC0
+    * SDA: PC1
+- Buzzer
+    * PC5
+- Dc Motor
+    * PC6
+    * PC7
+- UART 
+    * Tx: PD1
+    * Rx: PD0
 
 ## Implemented Drivers
 - GPIO
